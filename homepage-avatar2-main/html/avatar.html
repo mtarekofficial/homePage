@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../img/me3.jpg">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/test.css">
+</head>
+<body>
+    <!-- زر Start/End Session -->
+    <div class="start-session">
+        <button id="session-toggle" class="btn btn-outline-info rounded-5">Start Session</button>
+    </div>
+
+    <!-- الشات بوت -->
+    <section id="chatbot" style="display: none;"> <!-- مخفي في البداية -->
+        <div class="header">
+            <h1>Meta<span class="text-danger">H</span>ire</h1>
+            <p><span class="text-warning">Welcome to Chat!</span></p>
+        </div>
+    
+        <div class="chat_list">
+            <div class="message">
+            </div>
+            <div class="message user">
+            </div>
+        </div>
+    
+        <form action="#" class="typing_form">
+            <input type="text" id="speechToText" class="typing_input" placeholder="Type your message here..." required>
+            <button type="button"><i class="fa-solid fa-microphone"></i></button>
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </section>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/test.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // زر التحكم في الجلسة
+        const sessionToggleBtn = document.getElementById("session-toggle");
+        const chatbotSection = document.getElementById("chatbot");
+
+        // وظيفة التبديل بين "Start Session" و "End Session"
+        sessionToggleBtn.addEventListener("click", () => {
+            if (chatbotSection.style.display === "none") {
+                chatbotSection.style.display = "flex"; // عرض الشات بوت
+                sessionToggleBtn.textContent = "End Session"; // تغيير النص
+            } else {
+                chatbotSection.style.display = "none"; // إخفاء الشات بوت
+                sessionToggleBtn.textContent = "Start Session"; // تغيير النص
+            }
+        });
+    </script>
+</body>
+</html>

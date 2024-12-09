@@ -1,0 +1,140 @@
+/* عام */
+body {
+    background-image: url(../img/Nvidia-AI\ \(1\).webp); /* رابط الخلفية */
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+
+    /* إعدادات الخلفية */
+    background-size: cover; /* تغطية الشاشة بالكامل */
+    background-position: center; /* تمركز الخلفية */
+    background-repeat: no-repeat; /* منع تكرار الصورة */
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: overlay;
+
+}
+
+/* Start Session زر */
+.start-session {
+    position: absolute; /* تحديد الموقع المطلق */
+    top: 10px; /* مسافة من الأعلى */
+    left: 10px; /* مسافة من اليسار */
+    z-index: 10; /* ضمان ظهوره فوق باقي العناصر */
+}
+
+
+/* التصميم الرئيسي */
+section {
+    background: rgba(255, 255, 255, 0.515);
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    width: 25%; /* تصغير العرض إلى ربع الشاشة */
+    max-width: 300px; /* الحد الأقصى للعرض */
+    height: 60vh; /* تقليل الطول */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 15px;
+    overflow: hidden;
+}
+
+/* رأس الصفحة */
+.header {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, #5c6bc0, #3949ab);
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 18px; /* تصغير النص */
+    font-weight: bold;
+}
+
+.header p {
+    margin: 5px 0 0;
+    font-size: 10px; /* تصغير النص */
+    color: #e1e1e1;
+}
+
+/* قائمة الرسائل */
+.chat_list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+    background: #544f4f40;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.chat_list .message {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px; /* تقليل المسافات بين العناصر */
+}
+
+.chat_list .message img {
+    width: 25px; /* تصغير الصورة */
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.chat_list .message .text {
+    background: #e0e7ff;
+    padding: 6px 10px; /* تصغير المسافات الداخلية */
+    border-radius: 10px;
+    font-size: 10px; /* تصغير النص */
+    color: #2c3e50;
+    max-width: 70%; /* تقليل عرض النص */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chat_list .message.user .text {
+    background: #bbdefb;
+    align-self: flex-end;
+}
+
+/* شريط الكتابة */
+.typing_form {
+    padding: 8px;
+    background: #ffffff;
+    border-top: 1px solid #ddd;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.typing_form input {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 10px; /* تصغير النص */
+    background: #f7f7f7;
+}
+
+.typing_form button {
+    background: linear-gradient(to right, #5c6bc0, #3949ab);
+    border: none;
+    color: white;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.typing_form button:hover {
+    transform: scale(1.1);
+}
+
